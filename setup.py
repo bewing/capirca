@@ -18,22 +18,6 @@
 import os
 from setuptools import setup, find_packages
 
-def find_data_files(source):
-  result = []
-  for directory, _, files in os.walk(source):
-    files = [os.path.join(directory, x) for x in files]
-    result.append((directory, files))
-
-  return result
-data_files = (["aclcheck_cmdline.py", "aclgen.py", "definate.py"] +
-              find_data_files("def") +
-              find_data_files("definate") +
-              find_data_files("lib") +
-              find_data_files("policies") +
-              find_data_files("tests") +
-              find_data_files("third_party") +
-              find_data_files("tools"))
-
 setup(
     name='capirca',
     version="1.118",
@@ -49,5 +33,8 @@ setup(
                  'Topic :: System :: Networking :: Firewalls',
                 ],
     include_package_data=True,
-    data_files=data_files,
-    install_requires=['python-gflags', 'ply', 'ipaddr', 'mock'])
+    install_requires=['python-gflags', 'ply', 'ipaddr', 'mock'],
+    entry_points={'console_scripts': [
+                                      'aclgen = capirca.aclgen:main',
+                                      'aclcheck_cmdline = capirca.aclcheck_cmdline:main',
+                                      'definate = capirca.definate:main']})

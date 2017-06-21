@@ -26,9 +26,9 @@ from optparse import OptionParser
 from xml.etree import ElementTree as ET
 
 # compiler imports
-from lib import naming
-from lib import policy
-from lib import nsxv
+from capirca.lib import naming
+from capirca.lib import policy
+from capirca.lib import nsxv
 import nsxv_mocktest
 
 

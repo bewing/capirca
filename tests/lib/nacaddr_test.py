@@ -23,7 +23,7 @@ __author__ = 'watson@google.com (Tony Watson)'
 
 import unittest
 
-from lib import nacaddr
+from capirca.lib import nacaddr
 
 
 class NacaddrUnitTest(unittest.TestCase):

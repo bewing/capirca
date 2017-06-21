@@ -24,8 +24,8 @@ __author__ = 'watson@google.com (Tony Watson)'
 import io
 import unittest
 
-from lib import nacaddr
-from lib import naming
+from capirca.lib import nacaddr
+from capirca.lib import naming
 
 
 class NamingUnitTest(unittest.TestCase):

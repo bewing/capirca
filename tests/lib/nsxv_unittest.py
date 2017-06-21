@@ -23,9 +23,9 @@ from __future__ import unicode_literals
 import unittest
 from xml.etree import ElementTree as ET
 
-from lib import naming
-from lib import nsxv
-from lib import policy
+from capirca.lib import naming
+from capirca.lib import nsxv
+from capirca.lib import policy
 import nsxv_mocktest
 
 

@@ -23,10 +23,10 @@ __author__ = 'watson@google.com (Tony Watson)'
 
 import unittest
 
-from lib import aclcheck
-from lib import naming
-from lib import policy
-from lib import port
+from capirca.lib import aclcheck
+from capirca.lib import naming
+from capirca.lib import policy
+from capirca.lib import port
 
 
 POLICYTEXT = """

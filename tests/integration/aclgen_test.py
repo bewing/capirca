@@ -25,7 +25,7 @@ import shutil
 import tempfile
 import unittest
 
-import aclgen
+from capirca import aclgen
 
 
 class TestAclGenDemo(unittest.TestCase):
@@ -48,8 +48,8 @@ class TestAclGenDemo(unittest.TestCase):
 
     curr_dir = os.path.dirname(os.path.abspath(__file__))
     self.root_dir = os.path.realpath(os.path.join(curr_dir, '..', '..'))
-    self.policies_dir = os.path.join(self.root_dir, 'policies')
-    self.defs_dir = os.path.join(self.root_dir, 'def')
+    self.policies_dir = os.path.join(self.root_dir, 'tests/policies')
+    self.defs_dir = os.path.join(self.root_dir, 'tests/def')
 
   def tearDown(self):
     shutil.rmtree(self.output_dir)

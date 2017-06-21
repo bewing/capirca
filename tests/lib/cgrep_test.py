@@ -28,9 +28,9 @@ from __future__ import unicode_literals
 import argparse
 import unittest
 
-from lib import nacaddr
-from lib import naming
-from tools import cgrep
+from capirca import cgrep
+from capirca.lib import nacaddr
+from capirca.lib import naming
 
 
 _NETWORK = """
